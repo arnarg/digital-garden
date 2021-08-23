@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "38c77d6613869697",
+    "type": "split",
+    "children": [
+      {
+        "id": "49f530c5af00d294",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "My Obsidian setup.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2e379d02fbcfe6ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b4eecd799631dfc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1dc57fb6a8200a06",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "412c6e623144b610",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9d42513cf3b7345a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e612ebcb63597cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a0d345f7c2c54d11",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "My Obsidian setup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "49f530c5af00d294",
+  "lastOpenFiles": [
+    "My Obsidian setup.md",
+    "Untitled.md",
+    "posts/Untitled.md"
+  ]
+}

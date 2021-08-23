@@ -1,0 +1,1 @@
+Stuff about my Obsidian setup
