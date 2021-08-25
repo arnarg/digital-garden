@@ -5,6 +5,8 @@ tags:
 - wayland
 ---
 
+> This is a post from my old blog. I keep it here so backlinks from the internet still work. Check out my new [[Digital Garden]].
+
 Recently I bought a new laptop with the intention of running Linux with Sway as my WM. This is the setup I run on my workstation where I have a 60% keyboard on which I use caps lock as a function key for a second layer.
 
 Because muscle memory is a thing I have been using Karabiner Elements to remap the keyboard on my work macbook pro but I could not find a suitable alternative for Linux when using a Wayland compositor.

@@ -7,6 +7,8 @@ tags:
 - plex
 ---
 
+> This is a post from my old blog. I keep it here so backlinks from the internet still work. Check out my new [[Digital Garden]].
+
 I have an old whitebox server sporting a Xeon E5 (v1) that I'd like to get rid of. It's running a handful of VMs on Proxmox. Most of them I can get rid of by moving their services to Kubernetes, but I wasn't sure what I wanted to do with my NAS VM and Plex server. The latter you can easily run in Kubernetes but I'm not planning on having particularly powerful nodes and I need transcoding.
 
 When I was looking at potential consumer NAS boxes I noticed in a teardown of [Terramaster F2-221][1] that there's an internal USB header with a USB stick running the OS which gave me hope of running any OS that I want on it (that and that it has a standard x86_64 Intel CPU). This may very well be the case with other NASes from other manufacturers but I'm not too familiar with it.
