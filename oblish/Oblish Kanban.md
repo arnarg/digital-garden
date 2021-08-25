@@ -9,6 +9,10 @@ kanban-plugin: basic
 - [ ] Support custom slugs per note
 - [ ] Copy other files than just markdown notes
 - [ ] Support adding custom variables in  config.yml
+- [ ] [[Support themes]]
+- [ ] Support rendering kanban plugin files
+- [ ] Render a tags page
+- [ ] Render a graph page
 
 
 ## Doing
