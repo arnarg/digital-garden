@@ -1,5 +1,5 @@
 ---
-slug: nixos-terramaster-f2-221
+slug: /posts/nixos-terramaster-f2-221
 tags:
 - linux
 - nas
@@ -7,7 +7,9 @@ tags:
 - plex
 ---
 
-> This is a post from my old blog. I keep it here so backlinks from the internet still work. Check out my new [[Digital Garden]].
+> *This is a post from my old blog. I keep it here so backlinks from the internet still work. Check out my new [Digital Garden](/).*
+
+![](/images/posts/nixos-terramaster-f2-221/f2-221-hero.jpg)
 
 I have an old whitebox server sporting a Xeon E5 (v1) that I'd like to get rid of. It's running a handful of VMs on Proxmox. Most of them I can get rid of by moving their services to Kubernetes, but I wasn't sure what I wanted to do with my NAS VM and Plex server. The latter you can easily run in Kubernetes but I'm not planning on having particularly powerful nodes and I need transcoding.
 
@@ -36,13 +38,13 @@ In my aformentioned NAS VM I'm running NixOS and it's been an absolute bliss. If
 For some reason the HDMI on the back of the Terramaster turns off after a few seconds after booting it (I can see the GRUB menu and the kernel boot log but then it turns off). This happened with any distro I tried so eventually I created a [custom NixOS live CD][3] that has a known root password and automatically starts an SSH server for me to connect to from another machine. From there I can do a [regular install of NixOS][4].
 
 You will need to add the following in the config for your custom live CD to enable the SSH server:
-```
+```nix
 services.openssh.enabled = true;
 systemd.services.sshd.wantedBy = lib.mkOverride 40 [ "multi-user.target" ];
 ```
 
 And you want to enable root login:
-```
+```nix
 services.openssh.permitRootLogin = "yes";
 ```
 
@@ -54,14 +56,14 @@ When opening the case and unplugging the fan you may notice that the fan is conn
 
 Running `sensors-detect` revealed that the Super I/O chip on the system is `IT8613E` which the module [it87][5] thankfully does support. Modules `coretemp` and `it87` should be loaded and in NixOS that should be done by including the following in `/etc/nixos/configuration.nix` and running `nixos-rebuild switch`.
 
-```
+```nix
 boot.extraModulePackages = with pkgs.linuxPackages; [ it87 ];
 boot.kernelModules = ["coretemp" "it87"];
 ```
 
 That gives us the ability to monitor CPU temperature and current fan speed. `lm_sensors` however also includes a program called `fancontrol` which is a bash script that periodically checks the CPU temperature and sets the fan speed accordingly. You can run `pwmcontrol` to go through a wizard setting up the `fancontrol` config and writing it in `/etc/fancontrol`. Mine is below, however you have to load `coretemp` and `it87` before any other `hwmon` modules and in that order in order for it to work, so you might be better off running `pwmcontrol` yourself.
 
-```
+```sh
 INTERVAL=10
 DEVPATH=hwmon0=devices/platform/coretemp.0 hwmon1=devices/platform/it87.2592
 DEVNAME=hwmon0=coretemp hwmon1=it8613
@@ -75,7 +77,7 @@ MINSTOP=hwmon1/pwm3=12
 
 After that you can simply run `fancontrol`. Most distros provide a service file for systemd or whatever init system you're using. NixOS, however, doesn't so in your `/etc/nixos/configuration.nix` you can include the following.
 
-```
+```nix
 systemd.services.fancontrol = {
   enable = true;
   description = "Fan control";
@@ -118,7 +120,7 @@ So, running `echo 1 > /dev/hddled2` will turn LED 2 green. The module does not h
 
 I'm not gonna go too deep into packaging for Nix but I will show a working derivation below. I recommend reading [Nix pills][8] if you're interested in learning Nix.
 
-```
+```nix
 { stdenv, fetchFromGitHub, kernel }:
 
 stdenv.mkDerivation rec {
@@ -156,7 +158,7 @@ stdenv.mkDerivation rec {
 
 This derivation then needs to be appended to the list of extra module packages.
 
-```
+```nix
 { pkgs, lib, ... }:
 let
   hddled_tmj33 = lib.callPackage ./hddled_tmj33.nix { kernel = pkgs.linuxPackages.kernel; };
@@ -172,7 +174,7 @@ in {
 
 To install Plex Media Server you must include the following in your `/etc/nixos/configuration.nix`.
 
-```
+```nix
 # Plex has an unfree license
 nixpkgs.config.allowUnfree = true;
 

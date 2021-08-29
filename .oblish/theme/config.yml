@@ -1,0 +1,4 @@
+---
+noteTemplate: index.html
+copy:
+  - static

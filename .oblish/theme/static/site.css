@@ -1,0 +1,36 @@
+nav {
+	margin: 3em 0;
+}
+
+article img {
+	max-width: 100%;
+	margin: auto;
+	display: block;
+	border-radius: .3em;
+}
+
+pre {
+	overflow-y: auto;
+	padding: .2em .5em;
+	border-radius: .3em
+}
+
+pre span {
+	display: inline;
+	background-color: unset;
+	padding: unset;
+}
+
+footer {
+	float: left;
+	margin: 2em 0;
+	width: 100%;
+}
+
+footer > .copyright {
+	float: left;
+}
+
+footer > .socials {
+	float: right;
+}

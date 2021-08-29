@@ -1,2 +1,10 @@
 ---
-noteTemplate: index.html
+themeDirectory: theme
+vars:
+  siteName: codedbearder
+  favicon: /static/favicon.png
+  copyright: Arnar Ingason
+  copyrightYear: 2021
+  githubUsername: arnarg
+copy:
+  - static

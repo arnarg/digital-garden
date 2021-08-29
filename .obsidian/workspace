@@ -11,7 +11,19 @@
           "state": {
             "file": "oblish/Oblish Kanban.md"
           }
-        }
+        },
+        "group": "f91cdb90bf55ae11"
+      },
+      {
+        "id": "906b51964ff13368",
+        "type": "leaf",
+        "state": {
+          "type": "kanban",
+          "state": {
+            "file": "oblish/Oblish Kanban.md"
+          }
+        },
+        "group": "f91cdb90bf55ae11"
       }
     ],
     "direction": "vertical"
@@ -88,14 +100,14 @@
   "active": "49f530c5af00d294",
   "lastOpenFiles": [
     "oblish/Oblish Kanban.md",
-    "oblish/Untitled.md",
-    "tasks/Support themes.md",
-    "Untitled Kanban.md",
-    "Untitled.md",
-    "posts/Running NixOS on a consumer NAS.md",
-    "posts/I wrote a keyboard remapper for wayland.md",
     "👋 Hello There!.md",
-    "💎 My Obsidian setup.md",
-    "Digital Garden.md"
+    "oblish/Oblish.md",
+    "old blog.md",
+    "legacy/Running NixOS on a consumer NAS.md",
+    "legacy/TX3 Mini - Mainline Linux on an Android TV Box.md",
+    "legacy/I wrote a keyboard remapper for wayland.md",
+    "legacy/Untitled.md",
+    "images/posts/writing-keyboard-remapper-wayland/hero.jpg",
+    "images/posts/mainline-linux-on-tx3-mini/cable.jpg"
   ]
 }

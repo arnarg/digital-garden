@@ -1,11 +1,13 @@
 ---
-slug: writing-keyboard-remapper-wayland
+slug: /posts/writing-keyboard-remapper-wayland
 tags:
 - linux
 - wayland
 ---
 
-> This is a post from my old blog. I keep it here so backlinks from the internet still work. Check out my new [[Digital Garden]].
+> *This is a post from my old blog. I keep it here so backlinks from the internet still work. Check out my new [Digital Garden](/).*
+
+![](/images/posts/writing-keyboard-remapper-wayland/hero.jpg)
 
 Recently I bought a new laptop with the intention of running Linux with Sway as my WM. This is the setup I run on my workstation where I have a 60% keyboard on which I use caps lock as a function key for a second layer.
 
